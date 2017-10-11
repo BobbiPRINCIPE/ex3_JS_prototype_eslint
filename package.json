@@ -1,0 +1,16 @@
+{
+  "name": "ex3_JS_prototype_eslint",
+  "version": "1.0.0",
+  "description": "Little example project to show JS object creation, prototype and using eslint",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ilker kiris",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
