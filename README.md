@@ -1,6 +1,9 @@
 # ex3_JS_prototype_eslint
 Little example project to show JS object creation, prototype and eslint (to see JS errors via latest JS linting tool eslint)
 
+# JS object creation and prototype
++ see object_creation_0 directory
++ see object_creation directory
 
 ## VS Code Extensions used
 + Angular v4 TypeScript Snippets, 2.7.0, by John Papa
