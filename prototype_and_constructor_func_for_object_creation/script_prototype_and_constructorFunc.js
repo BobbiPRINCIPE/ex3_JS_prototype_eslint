@@ -1,18 +1,6 @@
 // 3 ways to costruct objects
 
-// 1) Creating object via "factory funciton" 
-// 1a) declare factory function to create object
-function myFactoryFunc(_name, _lastName) {
-    return {
-        name: _name,
-        lastName: _lastName
-    }
-}
-// 1b) create objects using above factory funciton 
-var myFactoryFuncCreated_1 = myFactoryFunc('ilker', 'kiris');
-var myFactoryFuncCreated_2 = myFactoryFunc('hakan', 'gider');
-
-// 2) Creating object via "constructor funciton"
+// 2) Creating object via "constructor function"
 // 2a) declare constructor function
 function MyPerson(_name, _lastName) {
     this.name = _name;
@@ -32,16 +20,23 @@ var myAnimal_1 = new MyAnimalPrototype('dog');
 var myAnimal_2 = new MyAnimalPrototype('cat');
 /*  check below in dev tool console
 MyAnimalPrototype.prototype
+myAnimal_1.__proto__
 MyAnimalPrototype.constructor
+myAnimal_1.__proto__.constructor
+MyAnimalPrototype
 myAnimal_1.myType
 myAnimal_2.myType
-myAnimal_1.constructor
-myAnimal_1.__proto__
 */
-// 3c) add things
+
+// 3c) NOTE attributes (and functions) added to MyAnimalPrototype.prototype after instances were created, will be available to ALL objects created using that constructor function
 MyAnimalPrototype.prototype.isHotBlooded = true;
 
 var myAnimal_3 = new MyAnimalPrototype('aligator');
+
+// 4d) You can do prototype chaining/inheritance using just an object as well via Object.create
 var myAnimal_3b = Object.create(myAnimal_3);
+// NOTE above is equivalent to below 2 lines
+var myAnimal_3b2 = {};
+myAnimal_3b2.__proto__ = myAnimal_3;
 
 // var myAnimal_2 = Object.create(new MyAnimalPrototype(''));

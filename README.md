@@ -42,3 +42,24 @@ At command line at root of project, issue below and see eslint results
 ```
 eslint script.js
 ```
+
+# prototypical inheritance
+## Look at directory; prototype_inheritance_1-GrandParent-Parent-Child
++ Shows prototypical inheritance of GrandParent<--Parent<--Child
++ Shows a child's constructor invoking the parent's constructor
++ Shows a child overwriting inherited function of parent
++ Shows a child's overwriting function invoking parent's one
++ Shows relationship of __proto__, prototype, constructor
+
+# prototype chaining
+# Look at directory; prototype_chaining
++ Shows prototype chaining, which is really a containment that behaves like inheritance
++ Shows an object's properties are different than what it can access via its __proto__
++ Shows and object's property can "shadow" one from its __proto__
++ Shows setting a property accessed from its __proto__, means adding a property to the object itself
+
+# prototype and factory function + new for creation of new objects
+# Look at directory prototype_and_constructor_func_for_object_creation
++ Shows constructor function + new setting constructor function's prototype and objects __proto__ attributes equal
++ Shows adding attributes (and functions) to a factory function, gets reflected in ALL instances created even before via that constructor function
++ Shows prototype chaining and object creation Object.create does behind the scenes
